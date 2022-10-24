@@ -1,0 +1,41 @@
+/******** CONTAINER-HOME ***************/
+
+.container-home{
+    height: 100vh;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "aside-left content";
+}
+#header-top{
+    grid-area: header-top;
+    background-color: green;
+    display: none;
+}
+#aside-left{
+    grid-area: aside-left;
+    background-color: yellow;
+}
+.content{
+   grid-area: content; 
+   background-color: brown;
+}
+
+
+
+
+/********* VUE TABLETTE & MOBILE ***************/
+
+@media screen and (max-width: 900px) {
+    .container-home{
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 3fr;
+        grid-template-areas: "header-top" "content";
+    }
+    #header-top{
+        display: block;
+    }
+    #aside-left{
+        display: none;
+    }
+    
+}
